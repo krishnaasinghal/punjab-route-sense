@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Bus, MapPin, Clock, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="bg-gradient-card shadow-card border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="bg-gradient-primary p-2 rounded-lg">
               <Bus className="h-8 w-8 text-white" />
             </div>
@@ -14,21 +15,21 @@ const Header = () => {
               <h1 className="text-xl font-bold text-foreground">Punjab Transport</h1>
               <p className="text-sm text-muted-foreground">Real-Time Tracking System</p>
             </div>
-          </div>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#tracking" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/tracking" className="text-foreground hover:text-primary transition-colors">
               Live Tracking
-            </a>
-            <a href="#routes" className="text-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link to="/routes" className="text-foreground hover:text-primary transition-colors">
               Bus Routes
-            </a>
-            <a href="#schedules" className="text-foreground hover:text-primary transition-colors">
-              Schedules
-            </a>
-            <a href="#admin" className="text-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+              Home
+            </Link>
+            <Link to="/admin" className="text-foreground hover:text-primary transition-colors">
               Admin Portal
-            </a>
+            </Link>
           </nav>
 
           <div className="flex items-center space-x-3">
